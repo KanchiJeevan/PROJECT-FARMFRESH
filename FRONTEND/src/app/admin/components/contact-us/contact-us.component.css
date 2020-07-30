@@ -1,0 +1,32 @@
+#contact{
+    background-color: #ffcc00;
+    text-align: center;
+    padding-top: 30pt;
+}
+#address{
+    color: #800000;
+    padding-top: 10pt;
+    background-color: #ffcc00;
+    padding-left: 30pt;
+    font-weight: bold;
+}
+#address p{
+    padding-left: 40pt;
+    color: #003300;
+}
+#name{
+    background-color: #ff3333;
+    padding-left: 70pt;
+    padding-right: 300pt;
+}
+#social{
+    font-size: small;
+}
+
+.btn-instagram {background-image: url("https://img.freepik.com/free-vector/colorful-smooth-gradient-background_97886-980.jpg?size=626&ext=jpg");color:#fff;}
+.btn-facebook {background-color:#3B5998;color:#fff;}
+.btn-google-plus {background-color:#d34836;color:#fff;}
+
+.btn-instagram:hover {background-color:#b300b3;color:#ff66ff;}
+.btn-facebook:hover {background-color:#2A4998;color:#4C6BBA;}
+.btn-google-plus:hover {background-color:#C23836;color:#E45A58;}

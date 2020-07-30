@@ -1,0 +1,80 @@
+#text{
+   text-align: center;
+   margin-top: 30pt;
+}
+#text h1{
+    font-size: 60pt;
+    font-weight: bolder;
+    font-family: 'Aref Ruqaa';;
+    color: #ffff00;
+    padding-bottom: 60pt;
+}
+#text h6{
+    font-size: 33pt;
+    font-weight: bold;
+   
+    padding-bottom: 100pt;
+}
+#text p{
+    font-size: 18pt;
+    font-style: italic;
+   
+}
+
+#welcome{
+    text-align: center;
+    margin-top: 40pt;
+}
+#welcome h1{
+    font-size: 50pt;
+    font-family: 'Yellowtail';
+}
+#popular{
+    text-align: center;
+    margin-top: 50pt;
+
+}
+#about{
+    text-align: center;
+    margin-top: 50pt;
+    
+}
+#index{
+    text-align: center;
+    margin-top: 35pt;
+    color: #ffff00;
+}
+#index h1{
+    font-size: 60pt;
+    font-family: 'Charm';
+    font-weight: bolder;
+    color: #009900;
+}
+#indexP{
+    padding-top: 20pt;
+    margin-left: 100pt;
+    margin-right: 100pt;
+    color: #ffff00;
+}
+#mg{
+    color:#000066;
+    font-family: 'Charm';
+
+}
+#mg h4{
+    padding-left: 500pt;
+}
+
+#social{
+    font-size: small;
+}
+
+.btn-instagram {background-image: url("https://img.freepik.com/free-vector/colorful-smooth-gradient-background_97886-980.jpg?size=626&ext=jpg");color:#fff;}
+.btn-facebook {background-color:#3B5998;color:#fff;}
+.btn-google-plus {background-color:#d34836;color:#fff;}
+.btn-arrow-down {background-color:#d34836;color:#fff;}
+
+.btn-instagram:hover {background-color:#b300b3;color:#ff66ff;}
+.btn-facebook:hover {background-color:#2A4998;color:#4C6BBA;}
+.btn-google-plus:hover {background-color:#C23836;color:#E45A58;}
+.btn-arrow-down:hover {background-color:#C23836;color:#E45A58;}

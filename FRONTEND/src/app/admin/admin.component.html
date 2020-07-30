@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+    <a href="#" class="navbar-brand">
+      <img src="https://thumbs.dreamstime.com/b/organic-farming-logo-design-idea-good-food-good-people-creative-symbol-concept-farm-fresh-products-unique-sign-icon-art-173499017.jpg" height="50" alt="logo">
+    </a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse"><span class="navbar-toggler-icon"></span>
+    </button>
+  
+      <a class="navbar-brand" href="#">Farm Fresh</a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+      </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link" routerLink="/admin/home" routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/admin/product"  routerLinkActive="active">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/admin/add" *ngIf="loggedIn()" routerLinkActive="active">Add Product</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/admin/cart" *ngIf="loggedIn()" routerLinkActive="active">Cart</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/admin/contact"  routerLinkActive="active">Contact Us</a>
+        </li>
+      </ul>
+  
+  
+      <ul class="navbar-nav">
+          <a class="nav-link" routerLink="/admin/login" *ngIf="!loggedIn()" routerLinkActive="active">Login</a>
+          <a class="nav-link" routerLink="/admin/register"  *ngIf="!loggedIn()" routerLinkActive="active">Register</a> 
+          <a class="nav-link" style="cursor: pointer;" *ngIf="loggedIn()" (click)="logoutUser()">Logout</a>
+      </ul>
+    </div>
+  </nav>
+  
+  <router-outlet></router-outlet>
+ 

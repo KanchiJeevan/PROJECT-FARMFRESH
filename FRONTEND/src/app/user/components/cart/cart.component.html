@@ -1,0 +1,43 @@
+<div class="card">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <button class="btn btn-primary" >Image</button>
+                        </th>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of items">
+                        <td>
+                            <img
+                            [src] = "item.imageUrl"
+                            [title] = "item.productName"
+                            [style.width.px] = "imageWidth"
+                            [style.height.px]= "imageHeight"
+                            [style.margin.px] = "imageMargin">
+                        </td>
+                        <td>{{item.productName}}</td>
+                        <td>{{item.productQuantity}}</td>
+                        <td>{{item.price}}</td>
+                    </tr>
+                    
+                </tbody>
+                <tr>
+                    <td><button (click)="clearCart()" class="btn btn-primary float-right">Clear Cart</button> </td>
+                    <td><button (click)="Buy()" class="btn btn-success float-right">Buy</button></td>
+                </tr>
+
+                
+            </table>
+        </div>
+    </div>
+</div>
+
+
+

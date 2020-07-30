@@ -1,0 +1,42 @@
+<div class="py-5">
+    <div class="row">
+        <div class="col-md-5 mx-auto">
+            <span class="anchor" id="formLogin"></span>
+       
+
+    <div class="card rounded-0">
+    <div class="card-header" style="background-color: #4da6ff;">
+        <h3 class="mb-0">Sign Up</h3>
+    </div>
+    <div class="card-body">
+        <form class="form" #adminLogin="ngForm">
+            <div class="form-group">
+                <label for="userName">Username</label>
+                <input type="text" [(ngModel)]="registeredAdmin.userName" #userName="ngModel" [class.is-invalid]="userName.invalid && userName.touched" name="userName" class="form-control  rounded-0" pattern="^[A-Za-z.]{3,20}$" required>
+                <small class="text-danger" [class.d-none]="userName.valid || userName.touched">Enter a valid username</small>
+            </div>
+            <div class="form-group">
+                <label for="uname1">Email</label>
+                <input type="email" [(ngModel)]="registeredAdmin.email" #email="ngModel" [class.is-invalid]="email.invalid && email.touched" name="email" class="form-control  rounded-0" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                <small class="text-danger" [class.d-none]="email.valid || email.touched">Enter a valid email</small>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" [(ngModel)]="registeredAdmin.password" #password="ngModel" [class.is-invalid]="password.invalid && password.touched" name="password" class="form-control  rounded-0" minlength="6" required>
+                <small class="text-danger" [class.d-none]="password.valid || password.touched">Enter a valid password</small>
+            </div>
+            <div class="form-group">
+                <label for="number">Mobile Number</label>
+                <input type="number" [(ngModel)]="registeredAdmin.number" #number="ngModel" [class.is-invalid]="number.invalid && number.touched" name="number" class="form-control  rounded-0" pattern="\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" required>
+                <small class="text-danger" [class.d-none]="number.valid || number.touched">Enter a valid number</small>
+            </div>
+            <button type="button" [disabled]="adminLogin.form.invalid" (click)="registerAdmin()" class="btn btn-primary btn-lg float-right">Sign Up</button>
+        </form>
+         
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+

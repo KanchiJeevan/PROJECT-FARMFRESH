@@ -1,0 +1,74 @@
+<!--Header starts here-->
+<div *ngIf="!loggedIn()">
+<div class="card bg-dark text-white">
+    <img src="https://dzasv7x7a867v.cloudfront.net/product_photos/40956525/nature-beauty-2560x1600-wallpaper388094_original.jpg" class="card-img" alt="..." height="500pt">
+    <div class="card-img-overlay" id="search">
+      <h3 class="card-title">What would you like to find?</h3>
+      <form class="example" action="/action_page.php">
+        <input type="text" placeholder="Search your products" name="search">
+        <a class="btn btn-search " href="#" id="social"><i class="icon-search icon-large"></i> search</a>
+      </form>
+      <div class="task">
+      <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+        <div class="card-body" id="animation">
+          <p class="card-text" id="text">Stay Home Stay Safe</p>
+          <a routerLink="/user/login" class="text-danger" style="font-family: 'Charm';"> <h4 class="card-title"> Online Delivery</h4></a>
+      </div>
+      </div>
+      <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+        <div class="card-body" id="animation">
+          <p class="card-text" id="text">Have a Question?</p>
+          <a routerLink="/user/contact" class="text-danger" style="font-family: 'Charm';"> <h4 class="card-title">Ask Us</h4></a>
+        </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+  <!--Header ends here-->
+
+
+<div class="card" style="background-color: #d9ffcc;">
+    <h1>{{title}}</h1>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <button class="btn btn-primary" (click)="toggleImage()" >{{showImage? "Hide" : "Show"}} Image</button>
+                        </th>
+                        <th>PRODUCT</th>
+                        <th *ngIf="loggedIn()">CODE</th>
+                        <th>QUANTITY</th>
+                        <th>PRICE</th>
+                        <th>5 <i class="icon-star icon-large" style="color: gold;"></i> RATING</th>
+                        <th *ngIf="loggedIn()">ACTION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of products">
+                        <td>
+                            <img *ngIf = "showImage" 
+                            [src] = "product.imageUrl"
+                            [title] = "product.productName"
+                            [style.width.px] = "imageWidth"
+                            [style.height.px]= "imageHeight"
+                            [style.margin.px] = "imageMargin">
+                        </td>
+                        <td>{{product.productName}}</td>
+                        <td *ngIf="loggedIn()">{{product.productCode}}</td>
+                        <td>{{product.productQuantity}}</td>
+                        <td>{{product.price}}</td>
+                        <td>{{product.starRating}}</td>
+                        <td>
+                            <button class="btn btn-success" routerLink="/user/login" *ngIf="!loggedIn()" >Buy</button>
+                            <button class="btn btn-success" (click)="addToCart(product)" *ngIf="loggedIn()" >Add to Cart</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,70 @@
+h1{
+    text-align: center;
+    margin-top: 20pt;
+    color: #004d00;
+    font-family: 'Charm';
+    font-weight: bold;
+}
+
+#search{
+    padding-top: 80pt;
+}
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 12px;
+    border: 1px solid #f1f1f1;
+    float: left;
+    width: 40%;
+    background: #f1f1f1;
+  }
+  
+  form.example button {
+    float: left;
+    width: 10%;
+    height: 29pt;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 12px;
+    border: 1px solid #2196F3;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background: #0b7dda;
+  }
+  
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .task{
+    margin-left: 850pt;
+    margin-top: -50pt;
+  }
+#animation{
+    animation-name: example;
+    animation-duration: 20s;
+}
+@keyframes example {
+    0%   {background-color: black;}
+    25%  {background-color: #33ccff;}
+    50%  {background-color: #66ccff;}
+    100% {background-color: green;}
+}
+#digital{
+    color: #990033;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+#text{
+    font-size: 14pt;
+}
+
+.btn-search {background-color:#33ccff;color:#fff;}
+
+.btn-search:hover {background-color:#80dfff;color:#ccf2ff;}
